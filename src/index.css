@@ -1,13 +1,146 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body { 
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 10vh;
 }
+
+.nav--bar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: grey;
+
+}
+
+.nav--bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+
+}
+
+.nav--bar ul li {
+  margin: 0;
+  padding: 2vh;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.nav--bar ul li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4vh;
+}
+
+#whats-app-img {
+  width: 15vw;
+  min-width: 180px;
+}
+
+#content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 10vh;
+  padding-top: 10vh;
+  text-align: center;
+
+}
+@media screen and (max-width: 768px) {
+  #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 10vh;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);;
+  padding: 2vh 2vw;
+  border: solid white;
+  border-radius: 10px;
+}
+
+#welcome {
+  grid-row: span 2;
+  font-size: 3vh;
+}
+
+#howItWorks {
+  margin: 0 10vw 10vh;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 10vw 10vh;
+  padding: 5vh 0;
+}
+
+#gallery-img {
+  height: 80vh;
+  width: 80vw;
+}
+ @media screen and (max-width: 768px) {
+  #gallery-img {
+    height: 30vh;
+    width: 80vw;
+  }
+ }
+
+ button {
+  border: solid;
+  border-width: 2px;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 1vh;
+  border-radius: 50%;
+  cursor: pointer;
+ }
+
+ #button-div {
+  display: flex;
+  justify-content: center;
+  margin: 5vh;
+ }
+
+#mini-cards {
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 3vh;
+  box-shadow: 0 10px 10px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vh;
+
+}
+
+.links--header {
+  grid-column: span 2;
+
+}
+
