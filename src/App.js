@@ -1,19 +1,20 @@
 import logo from './logo.svg';
-import './App.css';
 import salon from './images/salon.png';
 import dogSite from './images/dogSite.png';
 import taxi from './images/taxi.png';
 import WhatsAppButton from './images/WhatsAppButton.png'
 import { useState } from 'react';
-import { Link } from 'react-scroll';
+import './index.css'
+import TableToRender from './businessList.js'
+
 
 
 const navBar = (
     <nav className="nav--bar">
         <h1>Kacey's Websites</h1>
-        <ul>
-          <li>
-          <Link
+        {/* <ul>
+          <li> */}
+          {/* <Link
                 activeClass="active"
                 to="welcome"
                 spy={true}
@@ -43,7 +44,7 @@ const navBar = (
                 >Como Funciona
                 </Link>
           </li>
-        </ul>
+        </ul> */}
           <a href="https://wa.me/529993700666"><img id="whats-app-img" src={WhatsAppButton} /></a>
     </nav>
   )
@@ -69,9 +70,8 @@ const links = (
   <div className="card links">
   
 
-    <div className="links--header">
-      <h2>Sitios que lo hice</h2>
-      <p>¡Aquí se mostrará un enlace para tu sitio web! ¡Envíame un mensaje en <a href="https://wa.me/529993700666">WhatsApp</a> para empezar!</p>
+    <div className="welcome-box">
+      <p>A medida que más extranjeros se mudan a México, encuentro crucial apoyar a las empresas locales y evitar que las grandes corporaciones monopolicen estas hermosas ciudades. Aquí encontrará un directorio de empresas locales. Si es propietario de un negocio y desea un sitio web gratuito o que se agregue su información, envíeme un mensaje por WhatsApp.</p>
     </div>
    {/* <div id="mini-cards">
     <h3>Terapia de masaje</h3>
@@ -87,13 +87,12 @@ const links = (
   )
 const moreLinks = (
   <div className="card">
-  <h2>Todos los sitios</h2>
-    <p>¿Ya tienes un sitio web? ¡Envíame un mensaje y yo pondré un enlace para ti también!</p>
-        
+    <TableToRender/>
+  </div>
+    
+  
 
-    </div>
-
-  )
+)
 const Gallery = (
 
 
@@ -161,20 +160,28 @@ const attributes = (
   )
 
 
-function App() {
-  return (
-    <div>
+// finished pages variables 
+const kaceyWebYucatanMainPage = (
+   <div>
       {navBar}
 
       <div id="content">
-      {welcome}
+      {/*{welcome}*/}
       {links}
       {moreLinks}
+
       
       </div>
-      {Gallery}
-      {howItWorks}
+     {/* {Gallery}
+      {howItWorks}*/}
       </div>
+  )
+   
+
+
+function App() {
+  return (
+    kaceyWebYucatanMainPage
     );
 }
 
